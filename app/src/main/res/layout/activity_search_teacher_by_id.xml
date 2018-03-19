@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hanan.eduhr_application.SearchTeacherByID">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="233dp"
+                    android:layout_height="wrap_content"
+                    android:text="Search Teacher Information by ID:"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.502"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.256" />
+
+                <EditText
+                    android:id="@+id/teacher_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="40dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:selectAllOnFocus="false"
+                    android:singleLine="false"
+                    android:hint="Teacher ID"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/darker_gray"
+                    tools:layout_editor_absoluteX="85dp"
+                    tools:layout_editor_absoluteY="232dp" />
+
+                <Button
+                    android:id="@+id/buttonSearchTID"
+                    android:layout_width="178dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Search"
+
+                    tools:layout_editor_absoluteX="103dp"
+                    tools:layout_editor_absoluteY="303dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

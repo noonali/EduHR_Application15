@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hanan.eduhr_application.PersonalityQuestions">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/qOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="1. In 100 words or less, give an example of a situation where you overcame obstacles and worked under pressure"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/answerOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="Write your answer here"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    android:selectAllOnFocus="false"
+                    android:textAllCaps="false" />
+                1
+                <TextView
+                    android:id="@+id/qTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="2. In 100 words or less, give an example of how you made a positive contribution to a team, and its outcome"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/answerTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="Write your answer here"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    android:selectAllOnFocus="false"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:id="@+id/qThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="3. In 50 words or less, name one of your greatest strengths and weakness"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/answerThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="113dp"
+                    android:layout_margin="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:ems="10"
+                    android:gravity="top|left"
+                    android:hint="Write your answer here"
+                    android:inputType="textMultiLine"
+                    android:maxLength="1000"
+                    android:selectAllOnFocus="false"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_margin="12dp"
+                    android:padding="10dp"
+                    android:paddingTop="12dp"
+                    android:text="Submit"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
