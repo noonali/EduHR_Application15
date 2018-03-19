@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">EduHR_Application</string>
+
+    <string name="large_text">
+        "Teacher Info.\n\n"
+        "Name:\n"
+        "Major:\n"
+        "Date of Birth:\n"
+        "Phone Number:\n"
+        "E-Mail:\n"
+        "-----------------------------------\n"
+        "Personality analysis results.\n\n"
+        "Personality traits:\n"
+        "e.g. openness .... etc\n\n"
+        "Possible jobs for given traits:\n"
+        "e.g. intermediate school teacher ... etc\n"
+        "-----------------------------------\n"
+        "Questions and Answers for previous personality analysis results: \n\n"
+    "Q1 .... :\n"
+    "answer ....\n\n"
+    "Q2 .... :\n"
+    "answer .... \n\n"
+    "Q3 .... :\n"
+    "answer ....\n\n"
+    "-----------------------------------\n"
+    </string>
 </resources>

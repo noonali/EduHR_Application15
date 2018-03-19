@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ChooseUserType" />
+        <activity android:name=".LoginAdmin" />
+        <activity android:name=".SigninCurrentTeacher" />
+        <activity android:name=".SignupNewTeacher" />
+        <activity android:name=".CurrentTeacherMainPage" />
+        <activity android:name=".NewTeacherMainPage" />
+        <activity android:name=".SearchTeacherByID" />
+        <activity android:name=".PersonalityQuestions" />
+        <activity android:name=".ShowSearchResults" />
+        <activity android:name=".EnterPersonalInfo" />
+        <activity android:name=".UpdatePersonal_Info"></activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 </manifest>
