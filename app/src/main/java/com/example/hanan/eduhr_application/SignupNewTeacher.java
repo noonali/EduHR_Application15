@@ -26,8 +26,12 @@ public class SignupNewTeacher extends AppCompatActivity {
             String method = "signUp";
             BackgroundTask backgroundTask = new BackgroundTask(this);
             if(sign_up_id != null & sign_up_id.length() == 10 & sign_up_Email != null) {
+
                 backgroundTask.execute(method, sign_up_id, sign_up_Email);
-                startActivity(new Intent(this, LoginAdmin.class));
+
+                Intent intent = new Intent(this, EnterPersonalInfo.class);
+                intent.putExtra("teacher_id",sign_up_id);
+                startActivity(intent);
             }
             else{
                 Toast.makeText(this, "Incorrect Entries ", Toast.LENGTH_SHORT).show();

@@ -5,68 +5,79 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hanan.eduhr_application.EnterPersonalInfo">
-
-
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="539dp"
-        >
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="307dp"
-                android:layout_height="67dp"
-                android:text="Enter Personal Information" />
-
-            <EditText
-                android:id="@+id/Tname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Teacher Name"
-                />
+                android:text="Enter Personal Information"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
 
             <EditText
-                android:id="@+id/TPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="55dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Phone number" />
-
-            <EditText
-                android:id="@+id/Tdof"
+                android:id="@+id/teacher_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Date of Birth" />
+                android:hint="Teacher Name"
+                android:inputType="text" />
 
             <EditText
-                android:id="@+id/Tcode"
+                android:id="@+id/teacher_Phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="code" />
+                android:inputType="phone"
+                android:hint="Phone number" />
+
+            <EditText
+                android:id="@+id/teacher_dof"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="date"
+                android:hint="Date of Birth" />
+
+            <EditText
+                android:id="@+id/teacher_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="code" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="save"
-                android:onClick="Tsave"
+                android:layout_marginTop="60dp"
+                android:text="Save"
+                android:onClick="on_save_info"
                 />
+
         </LinearLayout>
 
     </RelativeLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

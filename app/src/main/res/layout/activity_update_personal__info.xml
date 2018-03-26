@@ -7,73 +7,92 @@
     tools:context="com.example.hanan.eduhr_application.UpdatePersonal_Info">
 
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
-                android:layout_height="23dp"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
                 android:text="Enter personal Information"
-
-                />
-
-            <TextView
-                android:id="@+id/Tname"
-                android:layout_width="wrap_content"
-                android:layout_height="15dp"
-                android:text="Teacher Name :" />
+                android:layout_gravity="center"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/Tdof"
+                android:id="@+id/display_update_tName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/black"
+                android:text="Teacher Name :"
+                android:textSize="18sp"
+                android:paddingLeft="35dp"
+                android:paddingRight="20dp"/>
+
+            <TextView
+                android:id="@+id/display_update_tDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/black"
                 android:text="Date Of Birth :"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="117dp" />
+                android:textSize="18sp"
+                android:paddingLeft="35dp"
+                android:paddingRight="20dp"/>
 
             <EditText
-                android:id="@+id/Temail"
+                android:id="@+id/update_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:inputType="textEmailAddress"
-                android:text="email" />
+                android:hint="email" />
 
             <EditText
-                android:id="@+id/TPhone"
+                android:id="@+id/update_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:inputType="phone"
-                android:text="phone number" />
+                android:hint="phone number" />
 
             <EditText
-                android:id="@+id/Tcode"
+                android:id="@+id/update_code"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Enter code " />
+                android:inputType="text"
+                android:hint="Enter code " />
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
                 android:text="save and update"
-                android:onClick="Tupdate"/>
+                android:onClick="on_update"/>
 
         </LinearLayout>
 
     </RelativeLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

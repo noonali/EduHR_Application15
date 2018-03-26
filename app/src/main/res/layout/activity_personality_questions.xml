@@ -42,7 +42,7 @@
                     android:maxLength="1000"
                     android:selectAllOnFocus="false"
                     android:textAllCaps="false" />
-                1
+
                 <TextView
                     android:id="@+id/qTwo"
                     android:layout_width="match_parent"
@@ -98,6 +98,7 @@
                     android:padding="10dp"
                     android:paddingTop="12dp"
                     android:text="Submit"
+                    android:onClick="onSave_answers"
                     />
             </LinearLayout>
         </RelativeLayout>

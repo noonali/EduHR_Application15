@@ -6,141 +6,116 @@
     android:layout_height="match_parent"
     tools:context="com.example.hanan.eduhr_application.NewTeacherMainPage">
 
-    <Button
-        android:id="@+id/Upload_button"
-        android:layout_width="217dp"
-        android:layout_height="77dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="Upload_button"
-        android:text="Upload cv.CPDF"
-        app:layout_constraintBottom_toTopOf="@+id/upplybtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="OnClick"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/upplybtn"
-        android:layout_width="217dp"
-        android:layout_height="77dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:onClick="button3"
-        android:text="Upply for job "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="OnClick"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <TextView
         android:id="@+id/teacher_info"
         android:layout_width="wrap_content"
-        android:layout_height="39dp"
-        android:layout_marginBottom="284dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Teacher Information "
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textColor="@android:color/black"
+        android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="252dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="name: "
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="39dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="236dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="ID:"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.103"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="216dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="E-mail:"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/dateofbirth"
-        android:layout_width="wrap_content"
-        android:layout_height="23dp"
-        android:layout_marginBottom="192dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="DateOfbearth:"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="172dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Phone Number:"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/code"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="152dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="Code:"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.093"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/uriTxt"
+        android:id="@+id/display_newName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/Upload_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/code"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="name: " />
+
+    <TextView
+        android:id="@+id/display_newId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="ID:" />
+
+    <TextView
+        android:id="@+id/display_newEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="E-mail:" />
+
+    <TextView
+        android:id="@+id/display_newDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="DateOfbearth:" />
+
+    <TextView
+        android:id="@+id/display_newPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="Phone Number:" />
+
+    <TextView
+        android:id="@+id/display_newCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="20dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="Code:" />
+
+        <Button
+            android:id="@+id/Upload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:onClick="onUploadBtn"
+            android:text="Upload cv.PDF" />
+
+        <Button
+            android:id="@+id/upplybtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:onClick="onApplyNew"
+            android:text="Apply for job " />
+
+    </LinearLayout>
+
+    </RelativeLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

@@ -56,7 +56,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Search"
-
                     tools:layout_editor_absoluteX="103dp"
                     tools:layout_editor_absoluteY="303dp" />
 
