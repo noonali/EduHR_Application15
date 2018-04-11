@@ -12,10 +12,7 @@ public class ChooseUserType extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_user_type);
     }
-    public void on_admin(View view)
-    {
-        startActivity(new Intent(this,LoginAdmin.class));
-    }
+    public void on_admin(View view){startActivity(new Intent(this,LoginAdmin.class));}
     public void on_new(View view)
     {
         startActivity(new Intent(this,SignupNewTeacher.class));

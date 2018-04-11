@@ -26,9 +26,15 @@ public class LoginAdmin extends AppCompatActivity {
         login_pass = ET_pass.getText().toString();
         String method = "login";
         BackgroundTask backgroundTask = new BackgroundTask(this);
+        if(login_id != null & login_id.length()<= 10  & login_pass != null & login_pass.length()<= 10) {
 
             backgroundTask.execute(method, login_id, login_pass);
             startActivity(new Intent(this, SearchTeacherByID.class));
+        }else{
+            Toast.makeText(this, "Incorrect Entries ", Toast.LENGTH_SHORT).show();
+
+        }
+
 
     }
 }

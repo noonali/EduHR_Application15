@@ -15,104 +15,57 @@
         android:layout_gravity="center"
         android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/teacher_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:text="Teacher Information " />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="35dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:text="name: " />
-
-    <TextView
-        android:id="@+id/id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="35dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:text="ID:" />
-
-    <TextView
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="35dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:text="E-mail:" />
-
-    <TextView
-        android:id="@+id/dateofbirth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="35dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:text="DateOfbearth:" />
-
-    <TextView
-        android:id="@+id/phone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="35dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:text="Phone Number:" />
-
-    <Button
-        android:id="@+id/updateBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:onClick="onUpdate"
-        android:text="Update personal info" />
-
-    <Button
-        android:id="@+id/uploadBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:onClick="onUploadCV"
-        android:text="Upload cv.CPDF" />
-
-    <Button
-        android:id="@+id/upplybtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:onClick="onApply"
-        android:text="Update info for job apply" />
-
-    </LinearLayout>
-
     </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_light"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/teacher_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Teacher Information "
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="368dp"
+                android:layout_height="260dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <Button
+                android:id="@+id/updateBtn"
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:onClick="onUpdate"
+                android:text="Update personal info" />
+
+            <Button
+                android:id="@+id/uploadBtn"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:onClick="EnterCV"
+                android:text="Enter CV" />
+
+            <Button
+                android:id="@+id/upplybtn"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:onClick="onApply"
+                android:text="Update info for job apply" />
+
+        </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>

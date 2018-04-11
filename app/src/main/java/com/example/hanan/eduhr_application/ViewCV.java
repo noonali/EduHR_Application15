@@ -1,110 +1,44 @@
 package com.example.hanan.eduhr_application;
 
-import android.app.AlertDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
-import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import net.gotev.uploadservice.MultipartUploadRequest;
-import net.gotev.uploadservice.UploadNotificationConfig;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
-
-public class NewTeacherMainPage extends AppCompatActivity {
-
-    String teacher_id;
+public class ViewCV extends AppCompatActivity {
     ListView listView;
-    String sName,  sEmail, sDob, sPhone, sCode;
-    Button UploadButton;
-
-
+    String QA1,  QA2,QA3;
+    String teacher_id;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_teacher_main_page);
-
+        setContentView(R.layout.activity_view_cv);
         listView = (ListView) findViewById(R.id.listView);
-        getJSON("https://appwebhost2018.000webhostapp.com/file.php");
-
-
+        getJSON("https://appwebhost2018.000webhostapp.com/QCV.php");
         Intent intent = getIntent();
         teacher_id = intent.getStringExtra("teacher_id");
 
-
-
-
-
     }
-    public void EnterCV(View view) {
-        Intent intent = getIntent();
-        teacher_id = intent.getStringExtra("teacher_id");
-
-        Intent intent2 = new Intent(this, EnterCV.class);
-        intent2.putExtra("teacher_id",teacher_id);
-
-
-        startActivity(intent2);
-
-    }
-
-
-
-    public void onApplyNew(View view) {
-
-        Intent intent2 = new Intent(this, PersonalityQuestions.class);
-        intent2.putExtra("teacher_id",teacher_id);
-
-        startActivity(intent2);
-
-    }
-
-
-
-
 
     private void getJSON(final String urlWebService) {
 
@@ -170,23 +104,20 @@ public class NewTeacherMainPage extends AppCompatActivity {
     }
 
     private void loadIntoListView(String json) throws JSONException {
-        List  kk=new ArrayList();
+        List kk=new ArrayList();
         int i = 0;
         JSONArray jsonArray = new JSONArray(json);
         String[] heroes = new String[jsonArray.length()];
 
         while (i  < jsonArray.length()) {
             JSONObject obj = jsonArray.getJSONObject(i);
-            sName = obj.getString("teacher_name");
-            kk.add("Name: "+sName);
-            sCode=obj.getString("code");
-            kk.add("code: "+sCode);
-            sDob=obj.getString("dateOfBirth");
-            kk.add("dateOfBirth: "+sDob);
-            sPhone=obj.getString("phone");
-            kk.add("phone: "+sPhone);
-            sEmail=obj.getString("email");
-            kk.add("Email: "+ sEmail);
+            QA1 = obj.getString("answer1");
+            kk.add("EXPERENCE: \n "+QA1);
+            QA2=obj.getString("answer2");
+            kk.add("Skills: \n "+QA2);
+            QA3=obj.getString("answer3");
+            kk.add("Additonal information:  \n "+QA3);
+
             i++;
 
 
@@ -200,11 +131,3 @@ public class NewTeacherMainPage extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
-
-
-

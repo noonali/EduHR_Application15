@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class SigninCurrentTeacher extends AppCompatActivity {
 
@@ -25,10 +26,17 @@ public class SigninCurrentTeacher extends AppCompatActivity {
 
         String method = "SignIn";
         BackgroundTask backgroundTask = new BackgroundTask(this);
+        if(teacher_id != null & teacher_id.length()<= 10  & teacher_code != null & teacher_code.length() == 4){
         backgroundTask.execute(method, teacher_id, teacher_code);
 
         Intent intent = new Intent(this, CurrentTeacherMainPage.class);
         intent.putExtra("teacher_id",teacher_id);
         startActivity(intent);
+
+        }else{
+            Toast.makeText(this, "Incorrect Entries ", Toast.LENGTH_SHORT).show();
+
+        }
+
     }
 }

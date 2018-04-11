@@ -5,79 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.hanan.eduhr_application.EnterPersonalInfo">
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-            <TextView
-                android:id="@+id/textView"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enter Personal Information"
-                android:textColor="@android:color/black"
-                android:textSize="24sp" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/teacher_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="60dp"
-                android:ems="10"
-                android:hint="Teacher Name"
-                android:inputType="text" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Personal Information"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
-            <EditText
-                android:id="@+id/teacher_Phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:inputType="phone"
-                android:hint="Phone number" />
+                <EditText
+                    android:id="@+id/teacher_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="60dp"
+                    android:ems="10"
+                    android:hint="Teacher Name"
+                    android:inputType="text" />
 
-            <EditText
-                android:id="@+id/teacher_dof"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:inputType="date"
-                android:hint="Date of Birth" />
+                <EditText
+                    android:id="@+id/teacher_Phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Phone number"
+                    android:inputType="phone" />
 
-            <EditText
-                android:id="@+id/teacher_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:inputType="text"
-                android:hint="code" />
+                <EditText
+                    android:id="@+id/teacher_dof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="Date of Birth" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:text="Save"
-                android:onClick="on_save_info"
-                />
+                <EditText
+                    android:id="@+id/teacher_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="code"
+                    android:inputType="text" />
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:onClick="on_save_info"
+                    android:text="Save" />
 
-    </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

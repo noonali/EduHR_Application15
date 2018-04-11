@@ -9,90 +9,71 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@android:color/black"
-                android:text="Enter personal Information"
-                android:layout_gravity="center"
-                android:textSize="24sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/display_update_tName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:textColor="@android:color/black"
-                android:text="Teacher Name :"
-                android:textSize="18sp"
-                android:paddingLeft="35dp"
-                android:paddingRight="20dp"/>
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Enter personal Information"
+                    android:textColor="@android:color/black"
+                    android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/display_update_tDob"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textColor="@android:color/black"
-                android:text="Date Of Birth :"
-                android:textSize="18sp"
-                android:paddingLeft="35dp"
-                android:paddingRight="20dp"/>
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="380dp"
+                    android:layout_height="160dp"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp" />
 
-            <EditText
-                android:id="@+id/update_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:hint="email" />
+                <EditText
+                    android:id="@+id/update_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="email"
+                    android:inputType="textEmailAddress" />
 
-            <EditText
-                android:id="@+id/update_phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:inputType="phone"
-                android:hint="phone number" />
+                <EditText
+                    android:id="@+id/update_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:ems="10"
+                    android:hint="phone number"
+                    android:inputType="phone" />
 
-            <EditText
-                android:id="@+id/update_code"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:ems="10"
-                android:inputType="text"
-                android:hint="Enter code " />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:text="save and update"
-                android:onClick="on_update"/>
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:onClick="on_update"
+                    android:text="save and update" />
 
-        </LinearLayout>
+            </LinearLayout>
 
-    </RelativeLayout>
+        </RelativeLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

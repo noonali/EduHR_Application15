@@ -8,6 +8,7 @@ package com.example.hanan.eduhr_application;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+import android.widget.EditText;
 import android.widget.Toast;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -39,12 +40,16 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
     }
     @Override
     protected String doInBackground(String... params) {
-        String signUp_url = "http://10.0.2.2/eduHR/signUp.php";
-        String saveTeacherInfo_url = "http://10.0.2.2/eduHR/saveInfo.php";
-        String updateTeacherInfo_url = "http://10.0.2.2/eduHR/updateInfo.php";
-        String login_url = "http://10.0.2.2/eduHR/login.php";
-        String signin_url = "http://10.0.2.2/eduHR/signIn.php";
-        String saveAnswers_url = "http://10.0.2.2/eduHR/saveAnswers.php";
+        String signUp_url = "https://appwebhost2018.000webhostapp.com/signUp.php";
+        String saveTeacherInfo_url = "https://appwebhost2018.000webhostapp.com/saveInfo.php";
+        String updateTeacherInfo_url = "https://appwebhost2018.000webhostapp.com/updateInfo.php";
+        String login_url = "https://appwebhost2018.000webhostapp.com/login.php";
+        String signin_url = "https://appwebhost2018.000webhostapp.com/signIn.php";
+        String saveAnswers_url = "https://appwebhost2018.000webhostapp.com/saveAnswers.php";
+        String search = "https://appwebhost2018.000webhostapp.com/searchID.php";
+        String saveAnswer1_url1 = "https://appwebhost2018.000webhostapp.com/EnterinfoCV.php";
+
+
 
         String method = params[0];
 
@@ -203,7 +208,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
             String teacher_id = params[1];
             String teacher_phone = params[2];
             String teacher_email = params[3];
-            String teacher_code = params[4];
+
 
             try {
                 URL url = new URL(updateTeacherInfo_url);
@@ -214,8 +219,7 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
                 String data = URLEncoder.encode("teacher_id", "UTF-8") + "=" + URLEncoder.encode(teacher_id, "UTF-8") + "&" +
                         URLEncoder.encode("teacher_phone", "UTF-8") + "=" + URLEncoder.encode(teacher_phone, "UTF-8") + "&" +
-                        URLEncoder.encode("teacher_email", "UTF-8") + "=" + URLEncoder.encode(teacher_email, "UTF-8")+ "&" +
-                        URLEncoder.encode("teacher_code", "UTF-8") + "=" + URLEncoder.encode(teacher_code, "UTF-8");
+                        URLEncoder.encode("teacher_email", "UTF-8") + "=" + URLEncoder.encode(teacher_email, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -239,11 +243,46 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
             }
         }
 
-        else if (method.equals("save_answers")) {
+        else if (method.equals("search")) {
             String teacher_id = params[1];
-            String answerOne = params[2];
-            String answerTwo = params[3];
-            String answerThree = params[4];
+
+
+            try {
+                URL url = new URL(search);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream OS = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
+                String data = URLEncoder.encode("search_id", "UTF-8") + "=" + URLEncoder.encode(teacher_id, "UTF-8") ;
+
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                String result="";
+                String line="";
+                while((line = bufferedReader.readLine())!= null) {
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else if (method.equals("save_answers")) {
+            String admin_id = params[1];
+            String answer_one = params[2];
+            String answer_two= params[3];
+            String answer_three = params[4];
 
             try {
                 URL url = new URL(saveAnswers_url);
@@ -252,10 +291,50 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
                 httpURLConnection.setDoOutput(true);
                 OutputStream OS = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
-                String data = URLEncoder.encode("teacher_id", "UTF-8") + "=" + URLEncoder.encode(teacher_id, "UTF-8") + "&" +
-                        URLEncoder.encode("answer_one", "UTF-8") + "=" + URLEncoder.encode(answerOne, "UTF-8") + "&" +
-                        URLEncoder.encode("answer_two", "UTF-8") + "=" + URLEncoder.encode(answerTwo, "UTF-8") + "&" +
-                        URLEncoder.encode("answer_three", "UTF-8") + "=" + URLEncoder.encode(answerThree, "UTF-8");
+                String data = URLEncoder.encode("teacher_id", "UTF-8") + "=" + URLEncoder.encode(admin_id, "UTF-8") + "&" +
+                        URLEncoder.encode("answer_one", "UTF-8") + "=" + URLEncoder.encode(answer_one, "UTF-8")+ "&" +
+                        URLEncoder.encode("answer_two", "UTF-8") + "=" + URLEncoder.encode(answer_two, "UTF-8")+ "&" +
+                        URLEncoder.encode("answer_three", "UTF-8") + "=" + URLEncoder.encode(answer_three, "UTF-8");
+                bufferedWriter.write(data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                String result="";
+                String line="";
+                while((line = bufferedReader.readLine())!= null) {
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+
+                return result;
+
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else if (method.equals("save_answer")) {
+            String admin_id = params[1];
+            String answer_1 = params[2];
+            String answer_2= params[3];
+            String answer_3 = params[4];
+
+            try {
+                URL url = new URL(saveAnswer1_url1);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                OutputStream OS = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(OS, "UTF-8"));
+                String data = URLEncoder.encode("teacher_id", "UTF-8") + "=" + URLEncoder.encode(admin_id, "UTF-8") + "&" +
+                        URLEncoder.encode("answer_1", "UTF-8") + "=" + URLEncoder.encode(answer_1, "UTF-8")+ "&" +
+                        URLEncoder.encode("answer_2", "UTF-8") + "=" + URLEncoder.encode(answer_2, "UTF-8")+ "&" +
+                        URLEncoder.encode("answer_3", "UTF-8") + "=" + URLEncoder.encode(answer_3, "UTF-8");
                 bufferedWriter.write(data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -294,5 +373,6 @@ public class BackgroundTask extends AsyncTask<String,Void,String>{
 
         }
     }
+
 
 }

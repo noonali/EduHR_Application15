@@ -8,11 +8,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -22,11 +24,11 @@
                 <TextView
                     android:layout_width="233dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="Search Teacher Information by ID:"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
                     android:textSize="24sp"
-                    android:layout_gravity="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -41,10 +43,10 @@
                     android:layout_gravity="center"
                     android:layout_margin="40dp"
                     android:ems="10"
+                    android:hint="Teacher ID"
                     android:inputType="textPersonName"
                     android:selectAllOnFocus="false"
                     android:singleLine="false"
-                    android:hint="Teacher ID"
                     android:textAlignment="center"
                     android:textColor="@android:color/darker_gray"
                     tools:layout_editor_absoluteX="85dp"
@@ -55,6 +57,7 @@
                     android:layout_width="178dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:onClick="search"
                     android:text="Search"
                     tools:layout_editor_absoluteX="103dp"
                     tools:layout_editor_absoluteY="303dp" />

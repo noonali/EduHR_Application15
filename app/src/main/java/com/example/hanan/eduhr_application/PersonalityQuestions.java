@@ -32,8 +32,8 @@ public class PersonalityQuestions extends AppCompatActivity {
         String method = "save_answers";
         BackgroundTask backgroundTask = new BackgroundTask(this);
         backgroundTask.execute(method, teacher_id, q_one, q_two, q_three);
-
-        startActivity(new Intent(this, NewTeacherMainPage.class));
+        Intent intent1 = new Intent(this, ChooseUserType.class);
+        startActivity(intent1);
 
     }
 }
